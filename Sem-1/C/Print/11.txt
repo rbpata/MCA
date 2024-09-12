@@ -1,0 +1,60 @@
+#Code :- 
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[100], freq[100];
+    int size, i, j, count;
+
+    printf("Enter size of array :- ");
+    scanf("%d", &size);
+
+    printf("Enter elements in array :- ");
+    for(i=0; i<size; i++)
+    {
+        scanf("%d", &arr[i]);
+        freq[i] = -1;
+    }
+
+
+    for(i=0; i<size; i++)
+    {
+        count = 1;
+        for(j=i+1; j<size; j++)
+        {
+            if(arr[i]==arr[j])
+            {
+                count++;
+                freq[j] = 0;
+            }
+        }
+
+        if(freq[i] != 0)
+        {
+            freq[i] = count;
+        }
+    }
+
+    printf("\nFrequency of all elements of array :- \n");
+    for(i=0; i<size; i++)
+    {
+        if(freq[i] != 0)
+        {
+            printf("%d occurs %d times\n", arr[i], freq[i]);
+        }
+    }
+
+    return 0;
+}
+
+#Output :-
+
+Enter size of array :- 5
+Enter elements in array :- 2 34 2 3 5
+
+Frequency of all elements of array :-
+2 occurs 2 times
+34 occurs 1 times
+3 occurs 1 times
+5 occurs 1 times
