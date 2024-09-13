@@ -1,3 +1,5 @@
+19.Write a C program to sort array elements in ascending or descending order(bubble sort).
+#Code :-
 #include<stdio.h>
 
 void bubbleSort(int arr[],int no){
@@ -55,3 +57,30 @@ int main(){
 	}
 	return 0;
 }
+
+
+#Output :-
+How Many Elements :- 5
+
+Enter 1 Element :-1
+
+Enter 2 Element :-2
+
+Enter 3 Element :-3
+
+Enter 4 Element :-4
+
+Enter 5 Element :-5
+
+After Sorting Array Elements in Ascending order :-        
+1 Element is 1 .
+2 Element is 2 .
+3 Element is 3 .
+4 Element is 4 .
+5 Element is 5 .
+After Sorting Array Elements in Descending order :-       
+1 Element is 5 .
+2 Element is 4 .
+3 Element is 3 .
+4 Element is 2 .
+5 Element is 1 .

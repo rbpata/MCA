@@ -1,3 +1,5 @@
+14.Write a C program to merge two arrays to third array. 
+
 #Code :-
 
 #include <stdio.h>
