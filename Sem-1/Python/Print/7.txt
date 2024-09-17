@@ -1,0 +1,35 @@
+7.Admission to a professional course is subject to the following
+conditions :
+a. marks in mathematics >= 60
+b. marks in physics >= 50
+c. marks in chemistry >= 40
+d. total in all three subjects >= 200
+or
+total in mathematics and physics >= 150
+Given the marks in the three subjects , write a program to process the
+applications to list an eligible candidate.x
+
+#Code :-
+
+maths=int(input("Enter Maths Marks : "));
+physics=int(input("Enter Physics Marks : "));
+chemistry=int(input("Enter Chemistry Marks : "));
+
+total=maths+physics+chemistry;
+math_pysics=maths+physics;
+
+if maths >= 60 and physics >= 50 and chemistry >= 40:
+    if total>=200 or math_pysics>=150:
+        print("The candidate is eligible for admission.");
+    else:
+        print("The candidate is not eligible for admission.");
+else:
+    print("The candidate is not eligible for admission.");
+
+
+#Output :-
+
+Enter Maths Marks : 80
+Enter Physics Marks : 70
+Enter Chemistry Marks : 60
+The candidate is eligible for admission.

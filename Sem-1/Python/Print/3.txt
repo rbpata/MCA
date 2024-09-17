@@ -1,0 +1,15 @@
+3.Write a program to tell if a year is a leap year or not.
+
+#Code :-
+year=int(input("Enter Year to Check Whether it is a leap year or not :- "));
+
+if(year%400==0 or (year%100==0 and year%100!=0)):
+    print("Entered Year is a leap year..");
+else:
+    print("Entered Year is not a leap year");
+
+
+#Output :-
+
+Enter Year to Check Whether it is a leap year or not :- 2024
+Entered Year is not a leap year

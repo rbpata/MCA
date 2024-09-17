@@ -1,0 +1,168 @@
+6.Write a program to define a class called book. Write a program to read information about 10 books and
+display books details in ascending order of price in proper format.
+
+#Code :-
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Book {
+    int id;
+    string name;
+    double price;
+
+public:
+
+    Book(int id = 0, string name = "", double price = 0.0) : id(id), name(name), price(price) {}
+
+    double getPrice() { return price; }
+
+    void printData() {
+        cout << "\n-----------------BOOK DETAILS-----------------\n";
+        cout << "Book ID : " << id;
+        cout << "\nBook Name : " << name;
+        cout << "\nBook Price : " << price << endl;
+    }
+};
+
+int main() {
+    int no = 3; 
+    Book b[20]; 
+
+    for (int i = 0; i < no; i++) {
+        int id;
+        string name;
+        double price;
+
+        cout << "\nEnter Details of Book " << i + 1 << ".";
+        cout << "\nEnter Book ID : ";
+        cin >> id;
+
+        cin.ignore();
+        cout << "Enter Book Name : ";
+        getline(cin, name); 
+
+        cout << "Enter Price of the book : ";
+        cin >> price;
+
+        b[i] = Book(id, name, price);
+    }
+
+    for (int i = 0; i < no; i++) {
+        for (int j = 0; j < no - i - 1; j++) {
+            if (b[j].getPrice() > b[j + 1].getPrice()) {
+                swap(b[j], b[j + 1]); 
+            }
+        }
+    }
+
+    for (int i = 0; i < no; i++) {
+        b[i].printData();
+    }
+
+    return 0;
+}
+
+
+#Output :-
+
+Enter Details of Book 1.
+Enter Book ID : 1
+Enter Book Name : C++ Programming
+Enter Price of the book : 550.5
+
+Enter Details of Book 2.
+Enter Book ID : 2
+Enter Book Name : Data Structures
+Enter Price of the book : 300
+
+Enter Details of Book 3.
+Enter Book ID : 3
+Enter Book Name : Algorithms
+Enter Price of the book : 450.75
+
+Enter Details of Book 4.
+Enter Book ID : 4
+Enter Book Name : Operating Systems
+Enter Price of the book : 650.25
+
+Enter Details of Book 5.
+Enter Book ID : 5
+Enter Book Name : Database Systems
+Enter Price of the book : 400
+
+Enter Details of Book 6.
+Enter Book ID : 6
+Enter Book Name : Computer Networks
+Enter Price of the book : 350
+
+Enter Details of Book 7.
+Enter Book ID : 7
+Enter Book Name : Machine Learning
+Enter Price of the book : 900
+
+Enter Details of Book 8.
+Enter Book ID : 8
+Enter Book Name : Artificial Intelligence
+Enter Price of the book : 750
+
+Enter Details of Book 9.
+Enter Book ID : 9
+Enter Book Name : Software Engineering
+Enter Price of the book : 500
+
+Enter Details of Book 10.
+Enter Book ID : 10
+Enter Book Name : Web Development
+Enter Price of the book : 425.5
+
+-----------------BOOK DETAILS-----------------
+Book ID : 2
+Book Name : Data Structures
+Book Price : 300
+
+-----------------BOOK DETAILS-----------------
+Book ID : 6
+Book Name : Computer Networks
+Book Price : 350
+
+-----------------BOOK DETAILS-----------------
+Book ID : 5
+Book Name : Database Systems
+Book Price : 400
+
+-----------------BOOK DETAILS-----------------
+Book ID : 10
+Book Name : Web Development
+Book Price : 425.5
+
+-----------------BOOK DETAILS-----------------
+Book ID : 3
+Book Name : Algorithms
+Book Price : 450.75
+
+-----------------BOOK DETAILS-----------------
+Book ID : 9
+Book Name : Software Engineering
+Book Price : 500
+
+-----------------BOOK DETAILS-----------------
+Book ID : 1
+Book Name : C++ Programming
+Book Price : 550.5
+
+-----------------BOOK DETAILS-----------------
+Book ID : 4
+Book Name : Operating Systems
+Book Price : 650.25
+
+-----------------BOOK DETAILS-----------------
+Book ID : 8
+Book Name : Artificial Intelligence
+Book Price : 750
+
+-----------------BOOK DETAILS-----------------
+Book ID : 7
+Book Name : Machine Learning
+Book Price : 900

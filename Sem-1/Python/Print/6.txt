@@ -1,0 +1,30 @@
+6.Write a program to swap the values of two variables.
+
+#Code :-
+no1=int(input("Enter number 1 :- "));
+no2=int(input("Enter number 2 :- "));
+
+print("\nBefore Swaping Numbers are :- ")
+print("no1 :-",no1);
+print("no2 :-",no2);
+
+temp=no1
+no1=no2
+no2=temp
+
+print("\nAfter Swaping Numbers are :- ")
+print("no1 :-",no1);
+print("no2 :-",no2);
+
+#Output :-
+
+Enter number 1 :- 20
+Enter number 2 :- 30
+
+Before Swaping Numbers are :-
+no1 :- 20
+no2 :- 30
+
+After Swaping Numbers are :-
+no1 :- 30
+no2 :- 20

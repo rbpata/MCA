@@ -1,0 +1,28 @@
+8.Write a program that reads the percentage obtained by the students and
+determines and prints the class obtained by the student as per the
+following rules:
+Percentage Class
+0 - 39 Fail
+40 – 59 Second class
+60 - 79 First class
+80 - 100 Distinction
+
+
+#Code :-
+
+per=int(input("\nEnter Percentage to check the class :-   "))
+
+if(per <=100 and per >=80):
+    print("\nDISTICTION !!")
+elif per <=79 and per>=60:
+    print("\nFirst Class !!")
+elif per <=59 and per>=40:
+    print("\nSecond Class !!")
+else:
+    print("FAIL !!")
+
+#Output :-
+
+Enter Percentage to check the class :-   45
+
+Second Class !!

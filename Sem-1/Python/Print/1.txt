@@ -1,0 +1,36 @@
+1.Write a program to add, multiply and divide two integers and float numbers.
+#Code :-
+int1 = int(input("Enter first integer: "))
+int2 = int(input("Enter second integer: "))
+
+float1 = float(input("Enter first float: "))
+float2 = float(input("Enter second float: "))
+
+
+print("\nInteger Operations :-\n")
+print("Sum :- ",int1+int2);
+print("multiplication :- ",int1*int2);
+print("Division :- ",int1/int2);
+
+print("\nFloat Operations :-\n")
+print("Sum :- ",float1+float2);
+print("multiplication :- ",float1*float2);
+print("Division :- ",float1/float2);
+
+#Output :-
+Enter first integer: 45
+Enter second integer: 4
+Enter first float: 34.5
+Enter second float: 4.2
+
+Integer Operations :-
+
+Sum :-  49
+multiplication :-  180
+Division :-  11.25
+
+Float Operations :-
+
+Sum :-  38.7
+multiplication :-  144.9
+Division :-  8.214285714285714

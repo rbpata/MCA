@@ -1,0 +1,68 @@
+4.Write a program to create class Date (int day, int month, int year). Read a value as day from user to display
+new date after adding the value to day in Date.
+
+#Code :-
+#include <iostream>
+using namespace std;
+class Date
+{
+
+    int year, month, day;
+    int daysInMonth[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
+public:
+    Date(int y, int m, int d) : year(y), month(m), day(d) {}
+
+    void addDays(int d)
+    {
+        day += d;
+
+        while (day > daysInMonth[month - 1])
+        {
+            day -= daysInMonth[month - 1];
+            month++;
+            if (month > 12)
+            {
+                month = 1;
+                year++;
+            }
+        }
+    }
+    void displayDate()
+    {
+        cout << "\nDate :- " << day << " / " << month << " / " << year;
+    }
+};
+
+int main()
+{
+
+    int d, m, y, addDays;
+
+    cout << "\nEnter Day :- ";
+    cin >> d;
+    cout << "\nEnter Month :- ";
+    cin >> m;
+    cout << "\nEnter Year :- ";
+    cin >> y;
+
+    Date d1(y, m, d);
+
+    cout << "Enter Extra Days you wanted to add :- ";
+    cin >> addDays;
+
+    d1.addDays(addDays);
+    d1.displayDate();
+    return 0;
+}
+
+#Output :-
+
+Enter Day :- 23
+
+Enter Month :- 2
+
+Enter Year :- 2024
+Enter Extra Days you wanted to add :- 10
+
+Date :- 5 / 3 / 2024

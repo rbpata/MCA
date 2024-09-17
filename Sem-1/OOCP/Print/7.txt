@@ -1,0 +1,62 @@
+7.Demonstrate the use of static variables in a class by using it to count the number of times the value
+is being inputted in the program.
+
+#Code :-
+
+#include <iostream>
+using namespace std;
+
+class Student
+{
+
+    int id;
+    string name;
+
+public:
+    static int count;
+    void inputData()
+    {
+        cout << "\nEnter STudent ID : ";
+        cin >> id;
+        cout << "\nEnter Student name : ";
+        cin >> name;
+        count++;
+    }
+    void showData()
+    {
+
+        cout << "\n----Student Details---- ";
+        cout << "\nID :- " << id;
+        cout << "\nName :- " << name;
+    }
+};
+int Student ::count = 0;
+int main()
+{
+    Student s1, s2;
+    s1.inputData();
+    s2.inputData();
+
+    s1.showData();
+    s2.showData();
+
+    cout << "\nNumber of student Registered is :- " << Student::count;
+}
+
+#Output :-
+
+Enter STudent ID : 1
+
+Enter Student name : ram
+
+Enter STudent ID : 2    
+
+Enter Student name : bhavesh
+
+----Student Details----
+ID :- 1
+Name :- ram
+----Student Details----
+ID :- 2
+Name :- bhavesh
+Number of student Registered is :- 2

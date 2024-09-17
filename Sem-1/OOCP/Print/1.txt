@@ -1,0 +1,39 @@
+1. Write a program to create class Student with student’s rollno, name and marks of three subjects
+(OOCP, AI and MF) and display the details of student with total marks of all subjects along with the 
+percentage in proper format. (Output should be in descending order of percentage.) 
+#Code :-
+
+#Output :-
+
+Enter the number of students: 2
+
+Enter details for student 1
+Roll No: 23
+Name: ram
+OOCP Marks: 78
+AI Marks: 34
+MF Marks: 54
+
+Enter details for student 2
+Roll No: 25 
+Name: bhavesh
+OOCP Marks: 89
+AI Marks: 45
+MF Marks: 34
+
+Student Details (sorted by percentage):
+Roll No: 25
+Name: bhavesh
+OOCP Marks: 89
+AI Marks: 45
+MF Marks: 34
+Total Marks: 168
+Percentage: 56%
+
+Roll No: 23
+Name: ram
+OOCP Marks: 78
+AI Marks: 34
+MF Marks: 54
+Total Marks: 166
+Percentage: 55.3333%
