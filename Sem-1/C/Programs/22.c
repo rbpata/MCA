@@ -15,6 +15,9 @@ void rightRotate(int arr[], int n, int d) {
     }
 }
 
+
+
+
 void printArray(int arr[], int size) {
     int i;
     for (i = 0; i < size; i++) {

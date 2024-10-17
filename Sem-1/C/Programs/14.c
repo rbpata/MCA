@@ -26,7 +26,9 @@ int main() {
     for (i = 0, j = n1; j < n1 + n2; i++, j++) {
         arr3[j] = arr2[i];
     }
-    
+
+
+
     printf("Merged array :-\n");
     for (i = 0; i < n1+n2; i++) {
         printf("%d ", arr3[i]);

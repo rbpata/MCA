@@ -1,3 +1,5 @@
+// write a C program to count frequency of each element in an array.
+
 #include <stdio.h>
 
 int main()

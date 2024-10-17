@@ -1,0 +1,118 @@
+4) WAP to define an object m1 of matrix class, use m1<<cout.
+
+#Code :-
+
+#include <iostream>
+using namespace std;
+
+class Matrix
+{
+private:
+    int rows, cols;
+    int **data;
+
+public:
+    Matrix(int r, int c) : rows(r), cols(c)
+    {
+        data = new int *[rows];
+        for (int i = 0; i < rows; ++i)
+        {
+            data[i] = new int[cols];
+            for (int j = 0; j < cols; ++j)
+            {
+                data[i][j] = i + j;
+            }
+        }
+    }
+
+    void input()
+    {
+        cout << "\nEnter Matrix Elements : ";
+        for (int i = 0; i < rows; ++i)
+        {
+            for (int j=0; j < cols; ++j)
+            {
+                cout << "\nEnter [" << i << "][" << j << "] ELement :- ";
+                cin >> data[i][j];
+            }
+        }
+    }
+
+    ~Matrix()
+    {
+        for (int i = 0; i < rows; ++i)
+        {
+            delete[] data[i];
+        }
+        delete[] data;
+    }
+
+    friend ostream &operator<<(ostream &os, const Matrix &mat);
+};
+
+ostream &operator<<(ostream &os, const Matrix &mat)
+{
+    os << "\nMatrix Elements are :\n";
+    for (int i = 0; i < mat.rows; i++)
+    {
+        for (int j=0; j < mat.cols; j++)
+        {
+            os<< mat.data[i][j]<<" ";
+        }
+        os<< endl;
+    }
+    return os;
+}
+
+int main()
+{
+    int row,col;
+    cout<<"\nEnter Row : ";
+    cin>>row;
+    cout<<"\nEnter Column : ";
+    cin>>col;
+
+
+    Matrix m1(row,col);
+    m1.input();
+
+    cout <<"\nMatrix m1 : " << endl;
+    cout << m1;
+
+    return 0;
+}
+
+
+
+
+#Output :- 
+
+Enter Row : 3
+
+Enter Column : 3
+
+Enter Matrix Elements :
+Enter [0][0] ELement :- 1
+
+Enter [0][1] ELement :- 2
+
+Enter [0][2] ELement :- 3
+
+Enter [1][0] ELement :- 4
+
+Enter [1][1] ELement :- 5
+
+Enter [1][2] ELement :- 6
+
+Enter [2][0] ELement :- 7
+
+Enter [2][1] ELement :- 8
+
+Enter [2][2] ELement :- 9
+
+Matrix m1 :
+
+Matrix Elements are :
+1 2 3
+4 5 6
+7 8 9

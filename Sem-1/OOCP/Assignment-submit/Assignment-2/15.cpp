@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+
+template <typename T>
+int find(T arr[], int size, T key)
+{
+    
+    for (int i = 0; i < size; ++i)
+    {
+        if (arr[i] == key)
+        {
+            return i;
+        }
+    }
+    return -1; 
+}
+int main()
+{
+
+    int intArr[] = {10, 20, 30, 40, 50};
+    int intSize = sizeof(intArr) / sizeof(intArr[0]);
+    int intKey;
+    cout << "Enter an integer to search: ";
+    cin >> intKey;
+
+    int intIndex = find(intArr, intSize, intKey);
+    if (intIndex != -1)
+        cout << "Integer found at index: " << intIndex << endl;
+    else
+        cout << "Integer not found!" << endl;
+
+
+
+    float floatArr[] = {10.5, 20.3, 30.1, 40.6, 50.2};
+    int floatSize = sizeof(floatArr) / sizeof(floatArr[0]);
+    float floatKey;
+    cout << "Enter a float to search: ";
+    cin >> floatKey;
+
+    int floatIndex = find(floatArr, floatSize, floatKey);
+    if (floatIndex != -1)
+        cout << "Float found at index: " << floatIndex << endl;
+    else
+        cout << "Float not found!" << endl;
+
+
+    char charArr[] = "Remember";
+    int charSize = sizeof(charArr) - 1;
+    char charKey;
+    cout << "Enter a character to search: ";
+    cin >> charKey;
+
+    int charIndex = find(charArr, charSize, charKey);
+    if (charIndex != -1)
+        cout << "Character found at index: " << charIndex << endl;
+    else
+        cout << "Character not found!" << endl;
+
+    return 0;
+}
