@@ -1,2 +1,2 @@
 # MCA
-Gujarat university MCA course whole 6 sem practicals are uploaded here. 
+Gujarat university MCA course whole sem-1 practicals are uploaded here. 
